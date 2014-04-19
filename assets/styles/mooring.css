@@ -1,0 +1,19 @@
+.navbar navbar-default {
+  background-color:#fe4040;
+  height:54px;
+  border:none;
+  border-radius:0px;
+  margin-bottom:0px;
+  position:fixed;
+  width:100%;
+}
+
+.navbar-brand {
+  color:#fff;font-family: sail, fantasy;font-size:38px;
+}
+
+#portfolio {
+  background-color:#c2c9d3;
+  color:#000;
+  height: 400px;
+}

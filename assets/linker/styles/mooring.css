@@ -1,0 +1,41 @@
+#navbar {
+  background-color:#fe4040;
+  height:54px;
+  border:none;
+  border-radius:0px;
+  margin-bottom:0px;
+  position:fixed;
+  width:100%;
+}
+
+#logo {
+  color:#fff;
+  font-family: sail, fantasy;
+  font-size:38px;
+}
+
+#navitem {
+  color:#fff;
+  font-family: muli, sans-serif;
+  margin-top:3px;
+}
+#navitem:hover {
+  color:#c2c9d3;
+}
+
+#dropdown {
+  background-color: #fe4040;
+  border: none;
+}
+
+#portfolio {
+  background-color:#c2c9d3;
+  color:#000;
+  height: 400px;
+}
+
+#toggle {
+  background-color: #fff;
+  border: none;
+  margin-top: 13px;
+}

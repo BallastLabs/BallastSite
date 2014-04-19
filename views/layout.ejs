@@ -21,7 +21,9 @@
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <!--STYLES-->
+        <link rel="stylesheet" href="/linker/styles/mooring.css">
+        <!--STYLES END-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -32,36 +34,36 @@
         <script src="//use.edgefonts.net/sail.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				
+
 			});
 		</script>
   </head>
 
   <body>
-  	<nav class="navbar navbar-default" role="navigation" style="background-color:#fe4040;height:54px; border:none;border-radius:0px;margin-bottom:0px;position:fixed;width:100%;">
+  	<nav class="navbar navbar-default" id="navbar" role="navigation">
   		<div class="container">
   			<div class="navbar-header">
-  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navitems">
+  				<button type="button" class="navbar-toggle" id="toggle" data-toggle="collapse" data-target="#dropdown">
   					<span class="sr-only">Toggle navigation</span>
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
   				</button>
-  				<a class="navbar-brand" href="#" style="color:#fff;font-family: sail, fantasy;font-size:38px;">Ballast</a>
+  				<a class="navbar-brand" id="logo" href="#">Ballast</a>
   			</div>
-  			<div class="collapse navbar-collapse" id="navitems">
+  			<div class="collapse navbar-collapse" id="dropdown">
   				<ul class="nav navbar-nav">
-  				<li><a href="#services" style="color:#fff;font-family: muli, sans-serif;">Services</a></li>
-  				<li><a href="#portfolio" style="color:#fff;font-family: muli, sans-serif;">Portfolio</a></li>
-  				<li><a href="#team" style="color:#fff;font-family: muli, sans-serif;">Team</a></li>
+  				<li><a href="#services" id="navitem">Services</a></li>
+  				<li><a href="#portfolio" id="navitem">Portfolio</a></li>
+  				<li><a href="#team" id="navitem">Team</a></li>
   				</ul>
   			</div>
   		</div>
   	</nav>
     <!-- Include the view file for the current controller/route -->
     <%- body %>
-    
-    
+
+
     <!--footer-->
     <div id="team" style="background-color:#fe4040; color:#fff;height: 980px;padding-top:50px;">
 		<div class="container">
@@ -77,22 +79,23 @@
       Client-side Javascript
       ========================
 
-      You can import any js files in your `assets` directory as you would 
+      You can import any js files in your `assets` directory as you would
       normally: using <script></script> tags.
 
       Here's an example of importing a few dependencies, in order:
     -->
     <!-- Bring in the socket.io client -->
-    <script type="text/javascript" src="/js/socket.io.js"></script>
-    <!-- then beef it up with some convenience logic for talking to Sails.js -->
-    <script type="text/javascript" src="/js/sails.io.js"></script>
-    <!-- listen on socket.io for incoming messages -->
-    <script type="text/javascript" src="/js/app.js"></script>
+
 
     <!-- Your scripts here? -->
     <!-- Your scripts here? -->
     <!-- Your scripts here? -->
-
+    <!--SCRIPTS-->
+    <script src="/linker/js/socket.io.js"></script>
+    <script src="/linker/js/sails.io.js"></script>
+    <script src="/linker/js/app.js"></script>
+    <script src="/linker/js/header.js"></script>
+    <!--SCRIPTS END-->
 
     <!--
 
@@ -113,7 +116,7 @@
       Another way: The Asset Linker
       ========================
 
-      Sails supports a Grunt-based asset linker, to automatically inject 
+      Sails supports a Grunt-based asset linker, to automatically inject
       <link> and <script> tags, as well any client-side templates you're using
       into your HTML layouts and views, respecting dependencies.
 
@@ -134,27 +137,5 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script type="text/javascript">
-        	var i = Math.floor(Math.random() * 5) + 1;
-        	$("#headercopy").hide();
-				switch(i) {
-					case 1:
-						$("#header-text").html('<h1 class="text-center" id="header-text" style="font-family: pt-sans-narrow, sans-serif;"><i class="fa fa-anchor" style="margin-right:5px"></i> Our <strong>devs</strong> are smarter than your honor roll student.</h1>');
-					break;
-					case 2:
-						$("#header-text").html('<h1 class="text-center" id="header-text" style="font-family: pt-sans-narrow, sans-serif;"><i class="fa fa-anchor" style="margin-right:5px"></i> Our projects are built <strong>API-first</strong>. Is yours?</h1>');
-					break;
-					case 3:
-						$("#header-text").html('<h1 class="text-center" id="header-text" style="font-family: pt-sans-narrow, sans-serif;"><i class="fa fa-anchor" style="margin-right:5px"></i> Our design is <strong>forward-thinking</strong>. Is yours?</h1>');
-					break;
-					case 4:
-						$("#header-text").html('<h1 class="text-center" id="header-text" style="font-family: pt-sans-narrow, sans-serif;"><i class="fa fa-anchor" style="margin-right:5px"></i> Our projects are built <strong>API-first</strong>. Is yours?</h1>');
-					break;
-					case 5:
-						$("#header-text").html('<h1 class="text-center" id="header-text" style="font-family: pt-sans-narrow, sans-serif;"><i class="fa fa-anchor" style="margin-right:5px"></i> Our design is <strong>forward-thinking</strong>. Is yours?</h1>');					break;
-				};
-			$("#headerh2").html('<h4 class="text-center" id="headerh2" style="font-family: pt-sans-narrow, sans-serif;">We build future-conscious applications and beautiful experiences for the web.</h4>');
-			$("#headercopy").fadeIn(900);
-        </script>
     </body>
 </html>
